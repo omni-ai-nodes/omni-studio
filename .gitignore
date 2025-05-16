@@ -1,0 +1,7 @@
+**.DS_Store
+lang.py
+yarn.lock
+node_modules
+package-lock.json
+public/electron/**
+logs
