@@ -111,7 +111,8 @@ const themeThinkBg = computed(() => {
     box-sizing: border-box;
     transition: max-height 0.5s ease;
     overflow: hidden;
-
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    
     .has-thought {
         width: 100%;
         display: flex;

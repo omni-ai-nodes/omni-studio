@@ -1,3 +1,17 @@
 {
-    "mcpServers": []
+    "mcpServers": [
+        {
+            "name": "howtocook-mcp",
+            "description": "",
+            "type": "stdio",
+            "command": "npx",
+            "baseUrl": "",
+            "env": {},
+            "args": [
+                "-y",
+                "howtocook-mcp"
+            ],
+            "isActive": true
+        }
+    ]
 }

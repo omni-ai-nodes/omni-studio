@@ -1,12 +1,12 @@
 <template>
-    <div :class="['think-wrapper']" ref="wrapperRef" v-if="content.replace(/\s/g, '') ">
-        <div class="has-thought">
-            <span class="flex items-center gap-2.5 h-15">
-                <i class="i-common:has-thought w-22 h-22"></i>{{ $t("已深度思考") }}
+    <div :class="['think-wrapper', { 'is-close': isClose }]" ref="wrapperRef" v-if="content.replace(/\s/g, '') ">
+        <div class="has-thought" @click="toggle">
+            <span class="flex items-center gap-2.5 h-15 text-12px">
+                <i class="i-common:has-thought w-14 h-14"></i>{{ $t("已深度思考") }}
             </span>
             <span>
-                <i class="i-common:arrow-up w-22 h-22 cursor-pointer" v-if="!isClose" @click="closeThink"></i>
-                <i class="i-common:arrow-down w-22 h-22 cursor-pointer" v-else @click="openThink"></i>
+                <i class="i-common:arrow-up w-14 h-14 cursor-pointer" v-if="!isClose"></i>
+                <i class="i-common:arrow-down w-14 h-14 cursor-pointer" v-else @click="openThink"></i>
             </span>
         </div>
         <div class="think-content" v-html="thinkContent"></div>
@@ -48,6 +48,11 @@ watch(() => props.content, () => {
     thinkContent.value = res
 }, { immediate: true })
 
+// 思考面板开关切换
+function toggle() {
+    isClose.value = !isClose.value
+}
+
 // 关闭思考
 function closeThink() {
     isClose.value = true
@@ -76,28 +81,36 @@ function openThink() {
 
 <style scoped lang="scss">
 .think-wrapper {
-    margin-bottom: var(--bt-mg-normal);
+    margin-bottom: 5px;
     background-color: v-bind(themeThinkBg);
-    padding: var(--bt-pd-small);
+    padding: 5px;
+    box-sizing: border-box;
     transition: max-height 0.5s ease;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    
     .has-thought {
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: var(--bt-pd-small);
     }
 
     .think-content {
         line-height: 28px;
-        padding: 0 var(--bt-pd-small);
+    }
+
+    &.is-close {
+        height: 30px;
     }
 }
 
 .is-close {
     max-height: 30px;
+}
+
+.content-pre {
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
 }
 </style>
