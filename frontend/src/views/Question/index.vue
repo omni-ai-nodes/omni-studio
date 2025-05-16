@@ -1,6 +1,6 @@
 <template>
     <div class="question">
-        <n-image :src="userImage" width="30" height="30" class="mt-6px" preview-disabled />
+        <n-image :src="userImage" width="40" height="40" class="mt-6px" preview-disabled />
         <div class="question-token-wrapper">
             <div class="files" v-if="questionContent.files?.length">
                 <div class="file-item cursor-pointer" v-for="(item, index) in questionContent.files" :key="index"
@@ -65,14 +65,13 @@ async function copyQuestion(text: string) {
 .question {
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     gap: 10px;
     margin: 0px 0 30px 0;
 
-
     .question-token-wrapper {
         @include base.column-flex-center;
-        align-items: flex-start;
+        align-items: flex-end;
 
 
         .files {
@@ -100,10 +99,9 @@ async function copyQuestion(text: string) {
 
         .question-content {
             @include base.row-flex-between;
-            justify-content: flex-start;
+            justify-content: flex-end;
 
             .question-token {
-                // background-color: #F5F5F5;
                 box-sizing: border-box;
                 border-radius: 5px;
                 display: flex;

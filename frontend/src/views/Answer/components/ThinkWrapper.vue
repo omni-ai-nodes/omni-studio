@@ -78,21 +78,22 @@ function openThink() {
 .think-wrapper {
     margin-bottom: var(--bt-mg-normal);
     background-color: v-bind(themeThinkBg);
-    padding: var(--bt-pd-normal);
+    padding: var(--bt-pd-small);
     transition: max-height 0.5s ease;
     overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
     .has-thought {
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: var(--bt-mg-normal);
-
+        margin-bottom: var(--bt-pd-small);
     }
 
     .think-content {
         line-height: 28px;
+        padding: 0 var(--bt-pd-small);
     }
 }
 

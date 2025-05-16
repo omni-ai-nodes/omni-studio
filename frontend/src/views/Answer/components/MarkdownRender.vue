@@ -215,6 +215,7 @@ onMounted(doMermaidRender)
         background-color: v-bind("themeMarkdownBg.code");
         padding: 40px var(--bt-pd-normal) 0;
         position: relative;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
         .tool-header {
             height: 40px;
