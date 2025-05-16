@@ -8,3 +8,4 @@ logs
 data
 out
 public/dist
+data/config.json
