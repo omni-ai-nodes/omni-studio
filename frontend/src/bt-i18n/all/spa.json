@@ -615,8 +615,8 @@
         "src": "默认从/models获取所有模型",
         "dst": "Obtener todos los modelos de / modelos por defecto"
     },
-    "开关所有": {
-        "src": "开关所有",
+    "同步模型": {
+        "src": "同步模型",
         "dst": "Interruptor todo"
     },
     "修改别名": {
@@ -711,12 +711,12 @@
         "src": "模型禁用成功",
         "dst": "Modelo desactivado con éxito"
     },
-    "已启用全部模型": {
-        "src": "已启用全部模型",
+    "已同步全部模型": {
+        "src": "已同步全部模型",
         "dst": "Todos los modelos habilitados"
     },
-    "已禁用全部模型": {
-        "src": "已禁用全部模型",
+    "已关闭同步模型": {
+        "src": "已关闭同步模型",
         "dst": "Todos los modelos desactivados"
     },
     "添加成功": {

@@ -290,8 +290,8 @@
     "删除成功": "Supprimer avec succès",
     "保存成功": "Sauvegarder le succès",
     "添加成功": "Ajouté avec succès",
-    "已启用全部模型": "Tous les modèles sont activés",
-    "已禁用全部模型": "Tous les modèles sont désactivés",
+    "已同步全部模型": "Tous les modèles sont activés",
+    "已关闭同步模型": "Tous les modèles sont désactivés",
     "模型启用成功": "Modèle activé avec succès",
     "模型禁用成功": "Modèle désactivé avec succès",
     "缺少API密钥": "Clé API manquante",
@@ -302,7 +302,7 @@
     "模型添加成功": "Modèle ajouté avec succès",
     "第三方API配置": "Configuration des API tierces",
     "默认从/models获取所有模型": "Obtenir tous les modèles de / Models par défaut",
-    "开关所有": "Switch tous",
+    "同步模型": "Switch tous",
     "请输入供应商名称": "Veuillez entrer le nom du fournisseur",
     "请选择模型功能": "Veuillez sélectionner un modèle fonction"
 }

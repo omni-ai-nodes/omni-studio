@@ -25,6 +25,9 @@ const useThirdPartyApiStore = defineStore("thirdPartyApiStore", () => {
     })
     // 是否启用了全部模型
     const isAllModelEnable = ref(false)
+    // 是否同步模型
+    const isSyncModel = ref<boolean>(false) // 明确指定类型并初始化
+    
     // 添加模型服务商
     const addSupplierShow = ref(false)
     // 添加模型服务商表单数据
@@ -136,6 +139,7 @@ const useThirdPartyApiStore = defineStore("thirdPartyApiStore", () => {
         addModelFormData,
         applierServiceConfig,
         isAllModelEnable,
+        isSyncModel,  // 确保返回这个变量
         addSupplierShow,
         addSupplierFormData,
         currentModelNameForEdiit,

@@ -290,8 +290,8 @@
     "删除成功": "Poista onnistuneesti",
     "保存成功": "Tallennettu onnistuneesti",
     "添加成功": "Lisätty onnistuneesti",
-    "已启用全部模型": "Kaikki mallit käytössä",
-    "已禁用全部模型": "Kaikki mallit on poistettu käytöstä",
+    "已同步全部模型": "Kaikki mallit käytössä",
+    "已关闭同步模型": "Kaikki mallit on poistettu käytöstä",
     "模型启用成功": "Mallin käyttöönotto onnistui",
     "模型禁用成功": "Mallin poistaminen käytöstä onnistui",
     "缺少API密钥": "API-avain puuttuu",
@@ -302,7 +302,7 @@
     "模型添加成功": "Malli lisätty onnistuneesti",
     "第三方API配置": "Kolmannen osapuolen API:n määritys",
     "默认从/models获取所有模型": "Oletusarvo saada kaikki mallit /models",
-    "开关所有": "Kytke kaikki",
+    "同步模型": "Kytke kaikki",
     "请输入供应商名称": "Syötä toimittajan nimi",
     "请选择模型功能": "Valitse mallin ominaisuudet"
 }

@@ -290,8 +290,8 @@
     "删除成功": "Eemaldamine õnnestus",
     "保存成功": "Salvestamine edukalt",
     "添加成功": "Lisamine õnnestus",
-    "已启用全部模型": "Kõik mudelid lubatud",
-    "已禁用全部模型": "Kõik mudelid on keelatud",
+    "已同步全部模型": "Kõik mudelid lubatud",
+    "已关闭同步模型": "Kõik mudelid on keelatud",
     "模型启用成功": "Mudeli lubamine õnnestus",
     "模型禁用成功": "Mudeli keelamine õnnestus",
     "缺少API密钥": "Puudub API võti",
@@ -302,7 +302,7 @@
     "模型添加成功": "Mudeli lisamine õnnestus",
     "第三方API配置": "Kolmanda osapoole API seadistamine",
     "默认从/models获取所有模型": "Kõik mudelid vaikimisi /models",
-    "开关所有": "Lülitage kõik",
+    "同步模型": "Lülitage kõik",
     "请输入供应商名称": "Palun sisesta tarnija nimi",
     "请选择模型功能": "Palun valige mudeli funktsioon"
 }

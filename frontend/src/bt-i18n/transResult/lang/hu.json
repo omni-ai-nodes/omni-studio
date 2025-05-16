@@ -290,8 +290,8 @@
     "删除成功": "Törlés sikeres",
     "保存成功": "Sikeresen mentve",
     "添加成功": "Sikeres hozzáadás",
-    "已启用全部模型": "Minden modell engedélyezve van",
-    "已禁用全部模型": "Minden modell letiltva",
+    "已同步全部模型": "Minden modell engedélyezve van",
+    "已关闭同步模型": "Minden modell letiltva",
     "模型启用成功": "A modell sikeres engedélyezése",
     "模型禁用成功": "A modell sikeres letiltása",
     "缺少API密钥": "Hiányzik az API kulcs",
@@ -302,7 +302,7 @@
     "模型添加成功": "Modell hozzáadása sikeres",
     "第三方API配置": "Harmadik fél API konfigurációja",
     "默认从/models获取所有模型": "Minden modell alapértelmezett beszerzése /models",
-    "开关所有": "Kapcsolás minden",
+    "同步模型": "Kapcsolás minden",
     "请输入供应商名称": "Kérjük, adja meg a beszállító nevét",
     "请选择模型功能": "Válassza ki a modellfunkciót"
 }

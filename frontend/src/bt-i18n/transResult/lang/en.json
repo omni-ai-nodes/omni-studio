@@ -290,8 +290,8 @@
     "删除成功": "Delete successfully",
     "保存成功": "Successfully saved",
     "添加成功": "Added successfully",
-    "已启用全部模型": "All models have been enabled",
-    "已禁用全部模型": "All models have been disabled",
+    "已同步全部模型": "All models have been enabled",
+    "已关闭同步模型": "All models have been disabled",
     "模型启用成功": "Model enabled successfully",
     "模型禁用成功": "Model disabled successfully",
     "缺少API密钥": "Missing API key",
@@ -302,7 +302,7 @@
     "模型添加成功": "Model added successfully",
     "第三方API配置": "Third party API configuration",
     "默认从/models获取所有模型": "By default, all models are obtained from/models",
-    "开关所有": "Switch all",
+    "同步模型": "Switch all",
     "请输入供应商名称": "Please enter the supplier name",
     "请选择模型功能": "Please select the model function"
 }

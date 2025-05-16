@@ -290,8 +290,8 @@
     "删除成功": "Sėkmingas pašalinimas",
     "保存成功": "Sėkmingai išsaugoti",
     "添加成功": "Pridėti sėkmingai",
-    "已启用全部模型": "Įjungti visi modeliai",
-    "已禁用全部模型": "Išjungti visi modeliai",
+    "已同步全部模型": "Įjungti visi modeliai",
+    "已关闭同步模型": "Išjungti visi modeliai",
     "模型启用成功": "Modelis sėkmingai įjungtas",
     "模型禁用成功": "Modelio išjungimas sėkmingas",
     "缺少API密钥": "Trūksta API rakto",
@@ -302,7 +302,7 @@
     "模型添加成功": "Pavyzdys sėkmingai pridėtas",
     "第三方API配置": "Trečiosios šalies API konfigūracija",
     "默认从/models获取所有模型": "Gauti visus modelius iš /models pagal numatytąjį nustatymą",
-    "开关所有": "Įjungti visus",
+    "同步模型": "Įjungti visus",
     "请输入供应商名称": "Įveskite tiekėjo pavadinimą",
     "请选择模型功能": "Pasirinkite modelio funkcijas"
 }

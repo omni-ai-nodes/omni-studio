@@ -290,8 +290,8 @@
     "删除成功": "Sletting lykkedes",
     "保存成功": "Gemt med succes",
     "添加成功": "Tilføjelse lykkedes",
-    "已启用全部模型": "Alle modeller aktiveret",
-    "已禁用全部模型": "Alle modeller deaktiveret",
+    "已同步全部模型": "Alle modeller aktiveret",
+    "已关闭同步模型": "Alle modeller deaktiveret",
     "模型启用成功": "Aktivering af model lykkedes",
     "模型禁用成功": "Model deaktivering lykkedes",
     "缺少API密钥": "Manglende API-nøgle",
@@ -302,7 +302,7 @@
     "模型添加成功": "Tilføjelse af model lykkedes",
     "第三方API配置": "Tredjeparts API konfiguration",
     "默认从/models获取所有模型": "Som standard hentes alle modeller fra/modeller",
-    "开关所有": "Skift til alle",
+    "同步模型": "Skift til alle",
     "请输入供应商名称": "Angiv leverandørens navn",
     "请选择模型功能": "Vælg venligst modellens funktionalitet"
 }

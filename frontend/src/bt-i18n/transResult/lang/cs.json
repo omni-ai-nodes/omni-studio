@@ -290,8 +290,8 @@
     "删除成功": "Úspěšné odstranění",
     "保存成功": "Úspěšně uloženo",
     "添加成功": "Úspěšně přidáno",
-    "已启用全部模型": "Povoleny všechny modely",
-    "已禁用全部模型": "Všechny modely zakázány",
+    "已同步全部模型": "Povoleny všechny modely",
+    "已关闭同步模型": "Všechny modely zakázány",
     "模型启用成功": "Model byl úspěšně povolen",
     "模型禁用成功": "Úspěšné vypnutí modelu",
     "缺少API密钥": "Chybějící klíč API",
@@ -302,7 +302,7 @@
     "模型添加成功": "Model byl úspěšně přidán",
     "第三方API配置": "Konfigurace API třetích stran",
     "默认从/models获取所有模型": "Ve výchozím nastavení získává všechny modely z /models",
-    "开关所有": "Vypnout vše",
+    "同步模型": "Vypnout vše",
     "请输入供应商名称": "Zadejte prosím jméno dodavatele",
     "请选择模型功能": "Vyberte prosím funkci modelu"
 }

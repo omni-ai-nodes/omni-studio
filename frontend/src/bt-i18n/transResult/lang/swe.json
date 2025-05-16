@@ -290,8 +290,8 @@
     "删除成功": "Radera framgångsrikt",
     "保存成功": "Spara framgångsrikt",
     "添加成功": "Lägg till framgångsrikt",
-    "已启用全部模型": "Alla modeller har aktiverats",
-    "已禁用全部模型": "Inaktiverad för alla modeller",
+    "已同步全部模型": "Alla modeller har aktiverats",
+    "已关闭同步模型": "Inaktiverad för alla modeller",
     "模型启用成功": "Modell aktiverad med lyckat resultat",
     "模型禁用成功": "Avbrytning av modellen lyckades",
     "缺少API密钥": "Saknas API-nyckel",
@@ -302,7 +302,7 @@
     "模型添加成功": "Lägg till modell framgångsrikt",
     "第三方API配置": "Tredjeparts API-konfiguration",
     "默认从/models获取所有模型": "Som standard erhålls alla modeller från/modeller",
-    "开关所有": "Byt alla",
+    "同步模型": "Byt alla",
     "请输入供应商名称": "Ange leverantörsnamn",
     "请选择模型功能": "Välj en modellfunktion"
 }

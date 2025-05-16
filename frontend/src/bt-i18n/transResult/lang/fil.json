@@ -290,8 +290,8 @@
     "删除成功": "Mag-alis na matagumpay",
     "保存成功": "Ang matagumpay na nai-save",
     "添加成功": "Magdagdag matagumpay",
-    "已启用全部模型": "Lahat ng mga modelo ay naka-enabled",
-    "已禁用全部模型": "Lahat ng mga modelo ay disabled",
+    "已同步全部模型": "Lahat ng mga modelo ay naka-enabled",
+    "已关闭同步模型": "Lahat ng mga modelo ay disabled",
     "模型启用成功": "Ang modelo ay nagtagumpay",
     "模型禁用成功": "Ang modelo ay matagumpay na inaalis",
     "缺少API密钥": "Walang API key",
@@ -302,7 +302,7 @@
     "模型添加成功": "Ang modelo ay nagdagdag matagumpay",
     "第三方API配置": "Ang configuration ng API ng third party",
     "默认从/models获取所有模型": "Sa pamamagitan ng default, lahat ng modelo ay nakukuha mula sa/modelo",
-    "开关所有": "Baguhin ang lahat",
+    "同步模型": "Baguhin ang lahat",
     "请输入供应商名称": "Paki-enter ang pangalan ng supplier",
     "请选择模型功能": "Mangyaring piliin ang modelong fungsyon"
 }

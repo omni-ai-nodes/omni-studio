@@ -290,8 +290,8 @@
     "删除成功": "Hapuskan berjaya",
     "保存成功": "Successfully saved",
     "添加成功": "Tambah berjaya",
-    "已启用全部模型": "Semua model telah dibenarkan",
-    "已禁用全部模型": "Semua model telah dimatikan",
+    "已同步全部模型": "Semua model telah dibenarkan",
+    "已关闭同步模型": "Semua model telah dimatikan",
     "模型启用成功": "Model berjaya diaktifkan",
     "模型禁用成功": "Model berjaya dimatikan",
     "缺少API密钥": "Kunci API hilang",
@@ -302,7 +302,7 @@
     "模型添加成功": "Model ditambah dengan berjaya",
     "第三方API配置": "Konfigurasi API pihak ketiga",
     "默认从/models获取所有模型": "Dapatkan semua model daripada /models secara lalai",
-    "开关所有": "suis semua",
+    "同步模型": "suis semua",
     "请输入供应商名称": "Sila masukkan nama penyedia",
     "请选择模型功能": "Sila pilih fungsi model"
 }

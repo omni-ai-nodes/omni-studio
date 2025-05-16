@@ -304,15 +304,77 @@ export async function cancelAddSupplier() {
  * @description 批量设置模型状态
  */
 export async function multipleModelStatusChange(val: boolean) {
-    const { supplierModelList, currentChooseApi } = getThirdPartyApiStoreData()
-    const multipleModelNames = supplierModelList.value.map((item: any) => item.modelName)
-    await setModelStatus(multipleModelNames.join(","), String(val))
-    if (val) {
-        message.success($t("已启用全部模型"))
-    } else {
-        message.success($t("已禁用全部模型"))
+    const { supplierModelList, currentChooseApi, applierServiceConfig, addModelFormData, isSyncModel } = getThirdPartyApiStoreData();
+    
+    try {
+        // 构建API地址
+        const baseUrl = applierServiceConfig.value.baseUrl.replace(/\/$/, "");
+        const modelsUrl = `${baseUrl}/v1/models`;
+        
+        // 设置同步状态为true
+        if (isSyncModel && typeof isSyncModel.value !== 'undefined') {
+            isSyncModel.value = true;
+        }
+        
+        // 获取模型列表
+        const response = await fetch(modelsUrl, {
+            headers: {
+                'Authorization': `Bearer ${applierServiceConfig.value.apiKey}`,
+                'Content-Type': 'application/json'
+            }
+        });
+        
+        if (!response.ok) {
+            throw new Error($t("获取模型列表失败"));
+        }
+        
+        const result = await response.json();
+        const models = result.data || [];
+        
+        // 添加获取到的模型
+        for (const model of models) {
+            const modelId = model.id;
+            if (modelId && !supplierModelList.value.some((m: any) => m.modelName === modelId)) {
+                // 设置addModelFormData的值
+                addModelFormData.value = {
+                    modelName: modelId,
+                    title: modelId,
+                    capability: ["LLM"],  // 默认设置为LLM
+                    status: false  // 默认设置为关闭状态
+                };
+                // 调用addModels方法
+                await addModels();
+            }
+        }
+        
+        // 根据用户选择设置所有模型状态
+        // const multipleModelNames = supplierModelList.value.map((item: any) => item.modelName);
+        // await setModelStatus(multipleModelNames.join(","), String(val));
+        
+        if (val) {
+
+            message.success($t("已同步全部模型"));
+           // 1秒后设置同步状态为false
+           setTimeout(() => {
+                if (isSyncModel && typeof isSyncModel.value !== 'undefined') {
+                    isSyncModel.value = false;
+                }
+            }, 500);
+        } else {
+            message.success($t("已禁用全部模型"));
+        }
+        
+       
+        
+        await getSupplierModelList(currentChooseApi.value!.supplierName);
+    } catch (error) {
+        // 发生错误时也要设置同步状态为false
+        if (isSyncModel && typeof isSyncModel.value !== 'undefined') {
+            isSyncModel.value = false;
+        }
+        message.error((error as Error).message || $t("操作失败"));
+        sendLog(error as Error);
     }
-    getSupplierModelList(currentChooseApi.value!.supplierName)
 }
 
 /**

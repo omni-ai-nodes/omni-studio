@@ -290,8 +290,8 @@
     "删除成功": "Xóa thành công",
     "保存成功": "Lưu thành công",
     "添加成功": "Thêm thành công",
-    "已启用全部模型": "Kích hoạt tất cả các mẫu",
-    "已禁用全部模型": "Tất cả các mẫu đã bị vô hiệu hóa",
+    "已同步全部模型": "Kích hoạt tất cả các mẫu",
+    "已关闭同步模型": "Tất cả các mẫu đã bị vô hiệu hóa",
     "模型启用成功": "Mô hình kích hoạt thành công",
     "模型禁用成功": "Mô hình vô hiệu hóa thành công",
     "缺少API密钥": "Thiếu API Key",
@@ -302,7 +302,7 @@
     "模型添加成功": "Mô hình Thêm thành công",
     "第三方API配置": "Cấu hình API của bên thứ ba",
     "默认从/models获取所有模型": "Nhận tất cả các mô hình từ/models theo mặc định",
-    "开关所有": "Switch Tất cả",
+    "同步模型": "Switch Tất cả",
     "请输入供应商名称": "Vui lòng nhập tên nhà cung cấp",
     "请选择模型功能": "Vui lòng chọn chức năng mô hình"
 }

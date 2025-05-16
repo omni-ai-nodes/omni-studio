@@ -290,8 +290,8 @@
     "删除成功": "Succesvol verwijderen",
     "保存成功": "Succesvol opgeslagen",
     "添加成功": "Voeg succesvol toe",
-    "已启用全部模型": "Alle modellen zijn ingeschakeld",
-    "已禁用全部模型": "Alle modellen uitgeschakeld",
+    "已同步全部模型": "Alle modellen zijn ingeschakeld",
+    "已关闭同步模型": "Alle modellen uitgeschakeld",
     "模型启用成功": "Model succesvol ingeschakeld",
     "模型禁用成功": "Model uitgeschakeld succesvol",
     "缺少API密钥": "Ontbrekende API-sleutel",
@@ -302,7 +302,7 @@
     "模型添加成功": "Model succesvol toegevoegd",
     "第三方API配置": "API-configuratie van derden",
     "默认从/models获取所有模型": "Standaard krijgen alle modellen van /models",
-    "开关所有": "Alles wisselen",
+    "同步模型": "Alles wisselen",
     "请输入供应商名称": "Voer de naam van de leverancier in",
     "请选择模型功能": "Selecteer een modelfunctie"
 }
