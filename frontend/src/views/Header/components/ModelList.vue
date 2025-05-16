@@ -1,6 +1,17 @@
 <template>
     <!-- <n-modal v-model:show="chooseModelVisible"> -->
-    <n-card :title="$t('模型选择')" segmented class="w-600">
+    <n-card segmented class="w-600">
+        <template #header>
+            <div class="flex items-center justify-between">
+                <span>{{ $t('模型选择') }}</span>
+                <n-button text @click="get_model_list()">
+                    <template #icon>
+                        <i class="i-mdi:refresh w-16 h-16"></i>
+                    </template>
+                </n-button>
+            </div>
+        </template>
+        
         <n-input-group class="mb-10">
             <n-input :placeholder="$t('搜索模型')" v-model:value="modelListFilterKey"></n-input>
         </n-input-group>
@@ -52,12 +63,14 @@ import { getThirdPartyApiStoreData } from '@/views/ThirdPartyApi/store';
 import { getHeaderStoreData } from '../store';
 import { getChatToolsStoreData } from '@/views/ChatTools/store';
 import { useI18n } from "vue-i18n";
+import { get_model_list } from "@/views/Settings/controller";
 
 const { t: $t } = useI18n()
 const { chooseModelVisible } = getHeaderStoreData()
 const { currentSupplierName, } = getThirdPartyApiStoreData()
 const { modelList, modelListSource, currentModel, modelListFilterKey, showModel, showModelList } = getHeaderStoreData()
 const { chatMask } = getChatToolsStoreData()
+
 console.log(showModelList)
 // 匹配服务商的列表集合
 const supplierCollection: any = {

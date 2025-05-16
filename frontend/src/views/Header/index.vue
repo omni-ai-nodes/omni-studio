@@ -18,9 +18,13 @@
             </n-popover>
         </div>
         <div class="right-tools">
-            <n-button type="success" @click="shareShow = true">
+            <!-- <n-button type="success" @click="shareShow = true">
                 <template #icon><i class="i-common:share w-16 h-16"></i></template>
                 {{ $t("分享") }}
+            </n-button> -->
+            <n-button type="primary" @click="get_model_list()">
+                <template #icon><i class="i-mdi:refresh w-16 h-16"></i></template>
+                {{ $t("刷新模型") }}
             </n-button>
         </div>
     </div>
