@@ -357,6 +357,7 @@ export class ToChatService {
         setModelUsedTotal(supplierName, modelStr);
         const chatService = new ChatService();
         const contextInfo = await chatService.read_chat(uuid);
+        console.log("contextInfo:", contextInfo)
         const chatContext: ChatContext = {
             role: 'user',
             content: user_content,
@@ -427,6 +428,7 @@ export class ToChatService {
             search_query: "",
             tools_result: [],
         };
+        
         await chatService.save_chat_history(uuid, chatHistory, chatHistoryRes, modelInfo.contextLength, regenerate_id);
         await chatService.update_chat_config(uuid, "search_type", search);
         let isSystemPrompt = false;
@@ -459,6 +461,7 @@ export class ToChatService {
                 handleOllamaImages(letHistory);
             }
         }
+
         if (letHistory.images && letHistory.images.length === 0) {
             delete letHistory.images;
         }
@@ -474,6 +477,7 @@ export class ToChatService {
             messages: history,
             stream: true,
         };
+
         if (isOllama) {
             const contextLength = calculateContextLength(history);
             let max_ctx = 4096;
@@ -486,6 +490,7 @@ export class ToChatService {
                 num_ctx
             };
         }
+
         if (modelName.indexOf('deepseek') !== -1) {
             if (isOllama) {
                 requestOption.options.temperature = 0.6;
@@ -493,12 +498,15 @@ export class ToChatService {
                 requestOption.temperature = 0.6;
             }
         }
+
         if (mcp_servers.length > 0) {
             isOllama = false;
         }
+
         event.response.set("Content-Type", "text/event-stream;charset=utf-8");
         event.response.set("Connection", "keep-alive");
         event.response.status = 200;
+
         const s = new Stream.Readable({
             read() { }
         });
@@ -510,12 +518,15 @@ export class ToChatService {
                 }
             }
         };
+
         let res: any;
         chatHistoryRes.content = "";
         let resTimeMs = 0;
         let isThinking = false;
         let isThinkingEnd = false;
+
         const ResEvent = async (chunk) => {
+
             if (!isOllama) resTimeMs = new Date().getTime();
             if(chunk.choices && chunk.choices.length === 0){
                 return;
