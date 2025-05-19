@@ -189,6 +189,7 @@ class ChatController {
         compare_id?: string,
         mcp_servers?: string[],
     }, event: any): Promise<any> {
+        console.log('chat', args);
         let toChatService = new ToChatService();
         return await toChatService.chat(args, event);
     }
@@ -271,6 +272,7 @@ class ChatController {
      * @returns {Promise<any>} - 中断成功的响应
      */
     async stop_generate(args: { context_id: string }): Promise<any> {
+        console.log('stop_generate', args);
         const { context_id: uuid } = args;
         // 设置对话状态为中断
         ContextStatusMap.set(uuid, false);
