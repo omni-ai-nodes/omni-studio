@@ -8,7 +8,7 @@
             <KnowledgeStore />
         </n-layout-sider>
         <n-layout>
-            <n-layout-header class="layout-header">
+            <n-layout-header v-if="$route.name !== 'mcp' && $route.name !== 'dashboard'" class="layout-header">
                 <Header />
             </n-layout-header>
             <n-layout-content class="layout-content" style="padding:0">
