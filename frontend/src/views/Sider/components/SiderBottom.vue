@@ -1,5 +1,11 @@
 <template>
     <ul class="recent-list">
+        <li @click="goToMcpDashboard">
+            <div class="flex items-center justify-start">
+                <i class="i-mdi:store w-16 h-16 ml-8 mr-10 text-[var(--bt-tit-color-secondary)]"></i>
+                <span>{{ $t("MCP广场") }}</span>
+            </div>
+        </li>
         <li @click="openAgent">
             <div class="flex items-center justify-start">
                 <i class="i-ph:star-four w-16 h-16 ml-8 mr-10 text-[var(--bt-tit-color-secondary)]"></i>
@@ -29,12 +35,18 @@
 </template>
 
 <script setup lang="ts">
+import { useRouter } from 'vue-router'
 import { openAgent } from "@/views/Agent/controller/index"
 import { openModelManage } from "@/views/Settings/controller/index"
 import { openSoftSettings } from "@/views/SoftSettings/controller"
 import { openThirdPartyModel } from "../controller"
 import { useI18n } from "vue-i18n";
 const { t: $t } = useI18n()
+const router = useRouter()
+
+function goToMcpDashboard() {
+    window.open('/#/mcp/dashboard', '_blank');
+}
 </script>
 
 <style scoped lang="scss">

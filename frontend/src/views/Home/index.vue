@@ -4,7 +4,7 @@
             <Sider />
         </n-layout-sider>
         <n-layout-sider :class="['layout-sider', { 'no-border': knowledgeSiderWidth == 0 }]"
-            :width="knowledgeSiderWidth">
+            :width="$route.name === 'mcp' || $route.name === 'dashboard' ? 0 : knowledgeSiderWidth">
             <KnowledgeStore />
         </n-layout-sider>
         <n-layout>
@@ -12,8 +12,8 @@
                 <Header />
             </n-layout-header>
             <n-layout-content class="layout-content" style="padding:0">
-                <ChatContent />
-                <!-- <WelcomeContent /> -->
+                <ChatContent v-if="$route.name !== 'mcp' && $route.name !== 'dashboard'" />
+                <router-view v-else />
             </n-layout-content>
         </n-layout>
     </n-layout>

@@ -8,18 +8,13 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      // component: Test,
-      component:Home
+      component: Home
     },
     {
       path: '/mcp',
       name: 'mcp',
-      component: Mcp,
+      component: Home,  // 使用Home组件作为布局
       children: [
-        {
-          path: '',
-          redirect: { name: 'dashboard' }
-        },
         {
           path: 'dashboard',
           name: 'dashboard',
