@@ -309,7 +309,7 @@ export async function multipleModelStatusChange(val: boolean) {
     try {
         // 构建API地址
         const baseUrl = applierServiceConfig.value.baseUrl.replace(/\/$/, "");
-        const modelsUrl = `${baseUrl}/v1/models`;
+        const modelsUrl = `${baseUrl}/models`;
         
         // 设置同步状态为true
         if (isSyncModel && typeof isSyncModel.value !== 'undefined') {
