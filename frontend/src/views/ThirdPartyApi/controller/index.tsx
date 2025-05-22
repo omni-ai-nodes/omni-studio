@@ -304,77 +304,15 @@ export async function cancelAddSupplier() {
  * @description 批量设置模型状态
  */
 export async function multipleModelStatusChange(val: boolean) {
-    const { supplierModelList, currentChooseApi, applierServiceConfig, addModelFormData, isSyncModel } = getThirdPartyApiStoreData();
-    
-    try {
-        // 构建API地址
-        const baseUrl = applierServiceConfig.value.baseUrl.replace(/\/$/, "");
-        const modelsUrl = `${baseUrl}/models`;
-        
-        // 设置同步状态为true
-        if (isSyncModel && typeof isSyncModel.value !== 'undefined') {
-            isSyncModel.value = true;
-        }
-        
-        // 获取模型列表
-        const response = await fetch(modelsUrl, {
-            headers: {
-                'Authorization': `Bearer ${applierServiceConfig.value.apiKey}`,
-                'Content-Type': 'application/json'
-            }
-        });
-        
-        if (!response.ok) {
-            throw new Error($t("获取模型列表失败"));
-        }
-        
-        const result = await response.json();
-        const models = result.data || [];
-        
-        // 添加获取到的模型
-        for (const model of models) {
-            const modelId = model.id;
-            if (modelId && !supplierModelList.value.some((m: any) => m.modelName === modelId)) {
-                // 设置addModelFormData的值
-                addModelFormData.value = {
-                    modelName: modelId,
-                    title: modelId,
-                    capability: ["LLM"],  // 默认设置为LLM
-                    status: false  // 默认设置为关闭状态
-                };
-                // 调用addModels方法
-                await addModels();
-            }
-        }
-        
-        // 根据用户选择设置所有模型状态
-        // const multipleModelNames = supplierModelList.value.map((item: any) => item.modelName);
-        // await setModelStatus(multipleModelNames.join(","), String(val));
-        
-        if (val) {
-
-            message.success($t("已同步全部模型"));
-           // 1秒后设置同步状态为false
-           setTimeout(() => {
-                if (isSyncModel && typeof isSyncModel.value !== 'undefined') {
-                    isSyncModel.value = false;
-                }
-            }, 500);
-        } else {
-            message.success($t("已禁用全部模型"));
-        }
-        
-       
-        
-        await getSupplierModelList(currentChooseApi.value!.supplierName);
-    } catch (error) {
-        // 发生错误时也要设置同步状态为false
-        if (isSyncModel && typeof isSyncModel.value !== 'undefined') {
-            isSyncModel.value = false;
-        }
-        message.error((error as Error).message || $t("操作失败"));
-        sendLog(error as Error);
+    const { supplierModelList, currentChooseApi } = getThirdPartyApiStoreData()
+    const multipleModelNames = supplierModelList.value.map((item: any) => item.modelName)
+    await setModelStatus(multipleModelNames.join(","), String(val))
+    if (val) {
+        message.success($t("已启用全部模型"))
+    } else {
+        message.success($t("已禁用全部模型"))
     }
+    getSupplierModelList(currentChooseApi.value!.supplierName)
 }
 
 /**
@@ -403,6 +341,9 @@ export async function getKey(url: string) {
 /**
  * @description 检查配置是否正确
  */
+/**
+ * @description 检查配置是否正确
+ */
 export async function checkConfig() {
     const { applierServiceConfig } = getThirdPartyApiStoreData()
     if (!applierServiceConfig.value.apiKey) {
@@ -412,6 +353,21 @@ export async function checkConfig() {
         message.error($t("缺少API地址"))
         return
     }
+    
+    // 处理baseUrl，检查是否需要添加版本号
+    const url = applierServiceConfig.value.baseUrl.trim()
+    // 检查是否以/v1、/v2、/v3等结尾
+    const versionRegex = /\/v\d+$/
+    if (!versionRegex.test(url)) {
+        // 去除末尾斜杠
+        let cleanUrl = url
+        if (cleanUrl.endsWith('/')) {
+            cleanUrl = cleanUrl.slice(0, -1)
+        }
+        // 如果不是以版本号结尾，添加/v1
+        applierServiceConfig.value.baseUrl = cleanUrl + '/v1'
+    }
+    
     const msg = await checkSupplierConfig()
     message.info(msg!)
 }

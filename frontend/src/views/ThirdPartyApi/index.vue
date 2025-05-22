@@ -22,8 +22,8 @@
                                     $t('默认从/models获取所有模型') }}</span>
                             </div>
                             <div>
-                                {{ $t("同步模型") }}
-                                <n-switch size="small" v-model:value="isSyncModel"
+                                {{ $t("开关所有") }}
+                                <n-switch size="small" v-model:value="isAllModelEnable"
                                     @update:value="multipleModelStatusChange">
                                 </n-switch>
                             </div>
@@ -70,7 +70,6 @@ const {
     currentChooseApi,
     addSupplierModel,
     isAllModelEnable,
-    isSyncModel,
 } = getThirdPartyApiStoreData()
 
 // 获取服务商列表

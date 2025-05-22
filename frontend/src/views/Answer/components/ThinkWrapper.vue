@@ -6,7 +6,7 @@
             </span>
             <span>
                 <i class="i-common:arrow-up w-14 h-14 cursor-pointer" v-if="!isClose"></i>
-                <i class="i-common:arrow-down w-14 h-14 cursor-pointer" v-else @click="openThink"></i>
+                <i class="i-common:arrow-down w-14 h-14 cursor-pointer" v-else @click.stop="openThink"></i>
             </span>
         </div>
         <div class="think-content" v-html="thinkContent"></div>
